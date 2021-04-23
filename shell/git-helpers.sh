@@ -39,7 +39,7 @@ function df() {
 
 function me() {
     echo 'git merge' $@ '\n'
-    git diff "${@}"
+    git merge "${@}"
 }
 
 function bh() {
