@@ -32,7 +32,7 @@ addOrUpdate "$HOME/.zshrc"
 
 # Copy config files
 
-read -p "Existing dotfiles in your home directory will be overwritten.. Are you sure? (y/n) " -n 1;
+read -p "Existing dotfiles in your home directory will be overwritten. Are you sure? (y/n) " -n 1;
 echo "";
 if [[ $REPLY =~ ^[Yy]$ ]]; then
 # Use rsync once there are more than a couple of files.
