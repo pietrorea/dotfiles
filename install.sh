@@ -30,6 +30,13 @@ addOrUpdate "$HOME/.bash_profile"
 
 addOrUpdate "$HOME/.zshrc"
 
-# Source current session
+# Copy config files
 
-echo Start a new shell to use these changes
+read -p "Existing dotfiles in your home directory will be overwritten.. Are you sure? (y/n) " -n 1;
+echo "";
+if [[ $REPLY =~ ^[Yy]$ ]]; then
+# Use rsync once there are more than a couple of files.
+    cp .gitconfig ~;
+fi;
+
+
