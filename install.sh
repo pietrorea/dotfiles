@@ -37,7 +37,7 @@ echo "";
 if [[ $REPLY =~ ^[Yy]$ ]]; then
 # Use rsync once there are more than a couple of files.
     cp .gitconfig ~;
-    cp .gitignore_gloabl ~;
+    cp .gitignore_global ~;
 fi;
 
 
