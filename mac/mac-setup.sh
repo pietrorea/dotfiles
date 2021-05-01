@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# Finder & file system
+
 defaults write com.apple.finder AppleShowAllFiles -bool true
 
 defaults write NSGlobalDomain AppleShowAllExtensions -bool true
@@ -14,3 +16,6 @@ defaults write com.apple.finder FXPreferredViewStyle -string "clmv"
 
 chflags nohidden ~/Library && xattr -d com.apple.FinderInfo ~/Library
 
+# Xcode
+
+defaults write com.apple.dt.Xcode ShowBuildOperationDuration -bool YES
