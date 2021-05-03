@@ -1,15 +1,17 @@
 [init]
     defaultBranch = main
 [user]
-	name = Pietro Rea
-	email = pietro@sweetpeamobile.com
+    name = Pietro Rea
+    email = pietro@sweetpeamobile.com
 [core]
     excludesfile = ~/.gitignore_global
 [push]
     default = current
+[pull]
+    rebase = false
 [fetch]
     prune = true
 [branch]
-	sort = -committerdate
+    sort = -committerdate
 [diff]
     colorMoved = zebra
