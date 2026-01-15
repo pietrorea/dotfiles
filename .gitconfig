@@ -2,7 +2,7 @@
     defaultBranch = main
 [user]
     name = Pietro Rea
-    email = pietro@sweetpeamobile.com
+    email = pietro@pietrorea.com
 [core]
     excludesfile = ~/.gitignore_global
 [push]
