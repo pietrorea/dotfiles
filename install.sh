@@ -4,40 +4,56 @@ DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
 
 SUFFIX='##### Added by my dotfiles' 
 SEARCH_PATTERN=".*${SUFFIX}"
-TEXT_TO_ADD="source ${DIR}/shell/source.sh ${SUFFIX}" 
 
-function addOrUpdate() {
-    if [[ ! -f "$1" ]]; then
-        echo File "$1" not found
+# Add a tagged line to the file (update it if it’s already there).
+function ensureLineInFile() {
+    local target="$1"
+    local text="$2"
+
+    if [[ -z "$text" ]]; then
+        echo "No text provided for $target"
         return
     fi
 
-    echo Updating "$1"
+    if [[ ! -f "$target" ]]; then
+        echo File "$target" not found
+        return
+    fi
 
-    if grep -q "${SUFFIX}" "$1"; then
-        sed -i.orig "s_${SEARCH_PATTERN}_${TEXT_TO_ADD}_" "$1"
+    echo Updating "$target"
+
+    if grep -q "${SUFFIX}" "$target"; then
+        sed -i.orig "s_${SEARCH_PATTERN}_${text}_" "$target"
     else
         echo
-        echo "${TEXT_TO_ADD}" >> "$1"
+        echo "${text}" >> "$target"
     fi
 }
 
-# Source .bash_profile
+# Ensure shell config files exist
 
-addOrUpdate "$HOME/.bash_profile"
+touch "$HOME/.bash_profile" "$HOME/.bashrc" "$HOME/.zshrc"
+
+# Source .bashrc
+BASH_SOURCE_LINE="source ${DIR}/shell/source.sh ${SUFFIX}" 
+ensureLineInFile "$HOME/.bashrc" "$BASH_SOURCE_LINE"
 
 # Source .zshrc
 
-addOrUpdate "$HOME/.zshrc"
+ensureLineInFile "$HOME/.zshrc" "$BASH_SOURCE_LINE"
 
-# Copy config files
+# Ensure .bash_profile sources .bashrc
 
-read -p "Existing dotfiles in your home directory will be overwritten. Are you sure? (y/n) " -n 1;
+ensureLineInFile "$HOME/.bash_profile" "source ~/.bashrc ${SUFFIX}"
+
+# Copy config files (.gitconfig, .gitignore_global, .vimrc, .nvmrc)
+
+read -p "Existing .gitconfig, .gitignore_global, .vimrc, and .nvmrc in your home directory will be overwritten. Continue? (y/n) " -n 1;
 echo "";
 if [[ $REPLY =~ ^[Yy]$ ]]; then
 # Use rsync once there are more than a couple of files.
-    cp .gitconfig ~;
-    cp .gitignore_global ~;
+    cp "${DIR}/.gitconfig" ~;
+    cp "${DIR}/.gitignore_global" ~;
+    cp "${DIR}/.vimrc" ~;
+    cp "${DIR}/.nvmrc" ~;
 fi;
-
-
