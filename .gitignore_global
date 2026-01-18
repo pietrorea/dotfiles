@@ -4,7 +4,3 @@
 # macOS
 .DS_Store
 
-# Ulysses
-.Ulysses-Group.plist
-.Ulysses-favorites.plist
-.Ulysses-Settings.plist
