@@ -1,0 +1,173 @@
+{
+  "gitlens.advanced.messages": {
+    "suppressCommitHasNoPreviousCommitWarning": false,
+    "suppressCommitNotFoundWarning": false,
+    "suppressFileNotUnderSourceControlWarning": false,
+    "suppressGitVersionWarning": false,
+    "suppressLineUncommittedWarning": false,
+    "suppressNoRepositoryWarning": false,
+    "suppressResultsExplorerNotice": false,
+    "suppressShowKeyBindingsNotice": true,
+    "suppressUpdateNotice": false,
+    "suppressWelcomeNotice": true
+  },
+  "projectManager.git.baseFolders": ["/Users/pietrorea/dev/github"],
+  "gitlens.keymap": "alternate",
+  "editor.detectIndentation": false,
+  "editor.wordWrap": "on",
+  "files.watcherExclude": {
+    "**/.git/objects/**": true,
+    "**/.git/subtree-cache/**": true,
+    "**/node_modules/*/**": true
+  },
+  "gitlens.historyExplorer.enabled": true,
+  "gitlens.views.fileHistory.enabled": true,
+  "gitlens.views.lineHistory.enabled": true,
+  "workbench.startupEditor": "newUntitledFile",
+  "explorer.confirmDelete": false,
+  "editor.fontFamily": "SF Mono, Menlo, Monaco, 'Courier New', monospace",
+  "telemetry.enableTelemetry": false,
+  "explorer.confirmDragAndDrop": false,
+  "gitlens.views.repositories.location": "gitlens",
+  "gitlens.views.fileHistory.location": "gitlens",
+  "gitlens.views.lineHistory.location": "gitlens",
+  "gitlens.views.compare.location": "gitlens",
+  "gitlens.views.search.location": "gitlens",
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "cSpell.userWords": [
+    "Appetize",
+    "authed",
+    "checkmark",
+    "colada",
+    "nodenext",
+    "overscroll",
+    "Pietro",
+    "pino",
+    "prismjs",
+    "rollup",
+    "Sweetpea",
+    "sweetpeamobile",
+    "Sweetstack",
+    "TIMESTAMPDIFF",
+    "umzug",
+    "webcomponents",
+    "xcode"
+  ],
+  "workbench.colorTheme": "Xcode Midnight Theme 2022",
+  "settingsSync.ignoredSettings": [],
+  "debug.javascript.autoAttachFilter": "disabled",
+  "projectManager.any.baseFolders": ["~/dev/"],
+  "projectManager.any.ignoredFolders": [
+    "node_modules",
+    "out",
+    "typings",
+    "test",
+    ".git",
+    ".github",
+    ".idea"
+  ],
+  "projectManager.any.maxDepthRecursion": 1,
+  "[yaml]": {
+    "editor.insertSpaces": true,
+    "editor.tabSize": 2,
+    "editor.autoIndent": "advanced",
+    "gitlens.codeLens.scopes": ["document"]
+  },
+  "extensions.ignoreRecommendations": true,
+  "debug.onTaskErrors": "abort",
+  "redhat.telemetry.enabled": true,
+  "editor.largeFileOptimizations": false,
+  "security.workspace.trust.untrustedFiles": "open",
+  "editor.stickyTabStops": true,
+  "remote.autoForwardPorts": false,
+  "editor.fontSize": 10,
+  "editor.tabCompletion": "on",
+  "editor.quickSuggestionsDelay": 5,
+  "typescript.preferences.includePackageJsonAutoImports": "on",
+  "colors": {
+    "editor.background": "#000"
+  },
+  "editor.minimap.enabled": false,
+  "editor.renderWhitespace": "none",
+  "editor.renderControlCharacters": false,
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.inlineSuggest.enabled": true,
+  "github.copilot.enable": {
+    "*": true,
+    "yaml": false,
+    "plaintext": false,
+    "markdown": false
+  },
+"editor.accessibilitySupport": "off",
+"settingsSync.ignoredExtensions": [
+    "undefined_publisher.xcode-midnight-2022"
+],
+"githubPullRequests.pushBranch": "always",
+"window.zoomLevel": 1,
+"github.copilot.editor.enableAutoCompletions": true,
+"githubPullRequests.useReviewMode": "auto",
+"githubPullRequests.queries": [
+
+
+    {
+        "label": "All Open",
+        "query": "default"
+    },
+    {
+        "label": "All Closed",
+        "query": "repo:${owner}/${repository} is:pr is:closed"
+    },
+    {
+        "label": "All Unread (2025)",
+        "query": "repo:${owner}/${repository} is:pr created:>=2025-01-01 -label:2025 -reviewed-by:${user}"
+    }
+    
+],
+"yaml.schemas": {
+    "file:///Users/pietrorea/.vscode/extensions/atlassian.atlascode-4.0.14/resources/schemas/pipelines-schema.json": "bitbucket-pipelines.yml"
+},
+"atlascode.jira.enabled": true,
+"atlascode.bitbucket.enabled": false,
+"atlascode.jira.lastCreateSiteAndProject": {
+    "siteId": "245d1251-4142-4fbb-a139-c7291db5be1f",
+    "projectKey": "MPE"
+},
+"atlascode.jira.jqlList": [
+    {
+        "id": "ed8e4d8c-a31f-4add-a102-ea0174cd3b72",
+        "siteId": "245d1251-4142-4fbb-a139-c7291db5be1f",
+        "filterId": "10078",
+        "name": "Filter for MPE board",
+        "query": "project = MPE ORDER BY Rank ASC",
+        "enabled": true,
+        "monitor": true
+    }
+],
+"atlascode.helpExplorerEnabled": false,
+"atlascode.jira.explorer.fetchAllQueryResults": true,
+"gitlens.ai.model": "vscode",
+"gitlens.ai.vscode.model": "copilot:gpt-4",
+"[dockercompose]": {
+    "editor.insertSpaces": true,
+    "editor.tabSize": 2,
+    "editor.autoIndent": "advanced",
+    "editor.defaultFormatter": "redhat.vscode-yaml"
+},
+"[github-actions-workflow]": {
+    "editor.defaultFormatter": "redhat.vscode-yaml"
+},
+"git.enableSmartCommit": true,
+"git.confirmSync": false,
+"githubPullRequests.pullBranch": "never"
+}

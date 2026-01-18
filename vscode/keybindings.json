@@ -1,0 +1,106 @@
+// Place your key bindings in this file to overwrite the defaults
+[
+    {
+      "key": "cmd+r",
+      "command": "workbench.action.debug.start",
+      "when": "!inDebugMode"
+    },
+    {
+      "key": "f5",
+      "command": "-workbench.action.debug.start",
+      "when": "!inDebugMode"
+    },
+    {
+      "key": "cmd+.",
+      "command": "workbench.action.debug.stop",
+      "when": "inDebugMode"
+    },
+    {
+      "key": "shift+f5",
+      "command": "-workbench.action.debug.stop",
+      "when": "inDebugMode"
+    },
+    {
+      "key": "shift+cmd+o",
+      "command": "workbench.action.quickOpen"
+    },
+    {
+      "key": "shift+alt+cmd+o",
+      "command": "projectManager.listProjects"
+    },
+    {
+      "key": "alt+cmd+p",
+      "command": "-projectManager.listProjects"
+    },
+    {
+      "key": "cmd+l",
+      "command": "workbench.action.gotoLine",
+      "when": "textInputFocus"
+    },
+    {
+      "key": "ctrl+cmd+left",
+      "command": "workbench.action.navigateBack"
+    },
+    {
+        "key": "ctrl+cmd+right",
+        "command": "workbench.action.navigateForward"
+    },
+    {
+      "key": "shift+alt+1",
+      "command": "workbench.action.toggleSidebarVisibility"
+    },
+    {
+        "key": "cmd+1",
+        "command": "workbench.view.explorer"
+    },
+    {
+        "key": "cmd+2",
+        "command": "workbench.view.search"
+    },
+    {
+        "key": "cmd+3",
+        "command": "workbench.view.scm"
+    },
+    {
+        "key": "cmd+4",
+        "command": "workbench.view.debug"
+    },
+    {
+        "key": "cmd+5",
+        "command": "workbench.view.extensions"
+    },
+    {
+      "key": "cmd+shift+j",
+      "command": "workbench.files.action.showActiveFileInExplorer"
+    },
+    {
+        "key": "shift+cmd+j shift+cmd+backspace",
+        "command": "workbench.action.showAllSymbols"
+    },
+    {
+        "key": "cmd+t",
+        "command": "-workbench.action.showAllSymbols"
+    },
+    {
+        "key": "cmd+t",
+        "command": "workbench.action.tasks.test"
+    },
+    {
+        "key": "cmd+b",
+        "command": "-workbench.action.toggleSidebarVisibility"
+    },
+    {
+        "key": "shift+alt+cmd+g",
+        "command": "workbench.action.tasks.configureDefaultBuildTask"
+    },
+    {
+        "key": "cmd+b",
+        "command": "workbench.action.tasks.build",
+        "when": "taskCommandsRegistered"
+    },
+    {
+        "key": "shift+cmd+b",
+        "command": "-workbench.action.tasks.build",
+        "when": "taskCommandsRegistered"
+    }
+  ]
