@@ -118,8 +118,10 @@
 "github.copilot.editor.enableAutoCompletions": true,
 "githubPullRequests.useReviewMode": "auto",
 "githubPullRequests.queries": [
-
-
+    {
+        "label": "Local Pull Request Branches",
+        "query": "default"
+    },
     {
         "label": "All Open",
         "query": "default"
@@ -132,7 +134,6 @@
         "label": "All Unread (2025)",
         "query": "repo:${owner}/${repository} is:pr created:>=2025-01-01 -label:2025 -reviewed-by:${user}"
     }
-    
 ],
 "yaml.schemas": {
     "file:///Users/pietrorea/.vscode/extensions/atlassian.atlascode-4.0.14/resources/schemas/pipelines-schema.json": "bitbucket-pipelines.yml"

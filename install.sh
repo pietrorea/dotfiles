@@ -76,6 +76,7 @@ fi;
 
 # Symlink VS Code / Cursor settings and keybindings
 VSCODE_SRC_DIR="${DIR}/vscode"
+EXT_LIST="${VSCODE_SRC_DIR}/extensions.txt"
 case "$OS_NAME" in
   Darwin)
     CODE_USER_DIR="$HOME/Library/Application Support/Code/User"
@@ -100,4 +101,21 @@ fi
 if [[ -n "$CURSOR_USER_DIR" ]]; then
     ensureSymlink "${VSCODE_SRC_DIR}/settings.json" "${CURSOR_USER_DIR}/settings.json"
     ensureSymlink "${VSCODE_SRC_DIR}/keybindings.json" "${CURSOR_USER_DIR}/keybindings.json"
+fi
+
+# Install extensions if editors are on PATH
+if [[ -f "$EXT_LIST" ]]; then
+  if command -v code >/dev/null 2>&1; then
+    echo "Installing VS Code extensions from ${EXT_LIST}"
+    xargs -n1 code --install-extension < "$EXT_LIST"
+  else
+    echo "code not found on PATH; skipping VS Code extensions"
+  fi
+
+  if command -v cursor >/dev/null 2>&1; then
+    echo "Installing Cursor extensions from ${EXT_LIST}"
+    xargs -n1 cursor --install-extension < "$EXT_LIST"
+  else
+    echo "cursor not found on PATH; skipping Cursor extensions"
+  fi
 fi

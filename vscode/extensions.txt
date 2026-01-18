@@ -1,13 +1,9 @@
-adpyke.vscode-sql-formatter
 alefragnani.project-manager
 bierner.markdown-mermaid
 eamodio.gitlens
 esbenp.prettier-vscode
 github.vscode-pull-request-github
-maisumdev.maisum-xcode-theme-dark
 ms-vscode-remote.remote-ssh
-ms-vscode-remote.remote-ssh-edit
-ms-vscode.remote-explorer
 redhat.vscode-xml
 redhat.vscode-yaml
 ritwickdey.liveserver
