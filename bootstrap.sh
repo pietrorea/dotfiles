@@ -12,8 +12,8 @@ function require_cmd() {
     fi
 }
 
+# require_cmd nvm - nvm is a script and needs a different check
 require_cmd zsh
-require_cmd nvm
 require_cmd pnpm
 
 if (( ${#missing[@]} > 0 )); then
