@@ -92,7 +92,7 @@ fi;
 # Symlink VS Code / Cursor settings and keybindings
 VSCODE_SRC_DIR="${DIR}/vscode"
 EXT_LIST="${VSCODE_SRC_DIR}/extensions.txt"
-LOCAL_THEME_SRC="${VSCODE_SRC_DIR}/local_extensions/xcode-midnight-2022"
+LOCAL_THEME_SRC="${VSCODE_SRC_DIR}/local_extensions/pgr.xcode-midnight-2022"
 case "$OS_NAME" in
   Darwin)
     CODE_USER_DIR="$HOME/Library/Application Support/Code/User"
@@ -128,10 +128,10 @@ fi
 # Copy local VS Code/Cursor theme extension (xcode-midnight-2022) if present
 if [[ -d "$LOCAL_THEME_SRC" ]]; then
     if [[ -n "$CODE_EXT_DIR" ]]; then
-        ensureCopyDir "$LOCAL_THEME_SRC" "${CODE_EXT_DIR}/xcode-midnight-2022"
+        ensureCopyDir "$LOCAL_THEME_SRC" "${CODE_EXT_DIR}/pgr.xcode-midnight-2022"
     fi
     if [[ -n "$CURSOR_EXT_DIR" ]]; then
-        ensureCopyDir "$LOCAL_THEME_SRC" "${CURSOR_EXT_DIR}/xcode-midnight-2022"
+        ensureCopyDir "$LOCAL_THEME_SRC" "${CURSOR_EXT_DIR}/pgr.xcode-midnight-2022"
     fi
 fi
 

@@ -1,5 +1,6 @@
 {
     "name": "xcode-midnight-2022",
+    "publisher": "pgr",
     "displayName": "xcode-midnight-2022",
     "description": "VS Code color theme that mimics Xcode's midnight theme",
     "version": "0.0.1",

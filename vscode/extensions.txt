@@ -8,4 +8,4 @@ redhat.vscode-xml
 redhat.vscode-yaml
 ritwickdey.liveserver
 streetsidesoftware.code-spell-checker
-undefined_publisher.xcode-midnight-2022
+pgr.xcode-midnight-2022

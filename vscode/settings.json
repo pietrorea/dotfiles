@@ -111,7 +111,7 @@
   },
 "editor.accessibilitySupport": "off",
 "settingsSync.ignoredExtensions": [
-    "undefined_publisher.xcode-midnight-2022"
+    "pgr.xcode-midnight-2022"
 ],
 "githubPullRequests.pushBranch": "always",
 "window.zoomLevel": 1,
