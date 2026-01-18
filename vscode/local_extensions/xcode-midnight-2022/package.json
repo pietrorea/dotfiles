@@ -1,0 +1,21 @@
+{
+    "name": "xcode-midnight-2022",
+    "displayName": "xcode-midnight-2022",
+    "description": "VS Code color theme that mimics Xcode's midnight theme",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.64.0"
+    },
+    "categories": [
+        "Themes"
+    ],
+    "contributes": {
+        "themes": [
+            {
+                "label": "Xcode Midnight Theme 2022",
+                "uiTheme": "vs-dark",
+                "path": "./themes/Xcode Midnight Theme 2022-color-theme.json"
+            }
+        ]
+    }
+}
